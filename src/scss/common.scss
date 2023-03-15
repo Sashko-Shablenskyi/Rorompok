@@ -1,0 +1,59 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.menu {
+  transition: all 0.15s linear;
+  &__list {
+    display: flex;
+    gap: 0 rem(60);
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: calc(25 / 18);
+    color: $secondColor;
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $mainColor;
+      font-size: rem(24);
+      @include adaptiveValue('gap', 40, 20);
+    }
+  }
+  &__item {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: em(-2);
+      display: block;
+      width: 0;
+      height: em(2);
+      background-color: $accentColor;
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    position: fixed;
+    top: -100%;
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: $accentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    .menu-open & {
+      right: 0;
+      top: 0;
+      border-radius: 0;
+    }
+  }
+}
