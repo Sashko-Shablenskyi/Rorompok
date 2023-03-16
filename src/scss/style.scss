@@ -163,4 +163,7 @@ body {
 // Підключення стилів окремих блоків
 @import 'header';
 @import 'footer';
-@import 'sections/intro';
+@import 'blocks/intro';
+@import 'blocks/features';
+@import 'blocks/collection';
+@import 'blocks/catalog';

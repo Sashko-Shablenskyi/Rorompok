@@ -6,9 +6,10 @@
   text-align: center;
   &__wrapper {
     position: absolute;
-    top: 50%;
+    // top: 50%;
+    @include adaptiveValue('top', 220, 120);
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translatex(-50%);
     max-width: rem(750);
     width: 85%;
     display: flex;
@@ -16,7 +17,7 @@
     align-items: center;
   }
   &__title {
-    @include adaptiveValue('font-size', 60, 24);
+    @include adaptiveValue('font-size', 60, 22);
     font-weight: 700;
     line-height: calc(70 / 60);
     color: #fff;
@@ -40,11 +41,12 @@
     padding: rem(20) 0 rem(20) rem(25);
     max-width: rem(493);
     width: 90%;
+
     background: url(../../img/icons/search-line.svg) center right 8px / auto
       no-repeat;
   }
 
-  @media (max-width: $mobile) {
-    height: 120vmax;
+  @media (max-width: $pc) {
+    height: 110vmax;
   }
 }

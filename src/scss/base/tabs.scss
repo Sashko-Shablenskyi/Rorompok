@@ -1,23 +1,61 @@
 .tabs {
-	// .tabs__navigation
-	&__navigation {
-		display: flex;
-	}
-	// .tabs__title
-	&__title {
-		border: 1px solid #eee;
-		padding: rem(10) rem(15);
-		border-radius: rem(5);
-		&._tab-active {
-			border: 1px solid #000;
-		}
-	}
-	// .tabs__content
-	&__content {
-		border: 1px solid #eee;
-		padding: rem(10) rem(15);
-	}
-	// .tabs__body
-	&__body {
-	}
+  // .tabs__navigation
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    margin: rem(16) 0 rem(64);
+  }
+  // .tabs__title
+  &__title {
+    position: relative;
+    border: none;
+    padding: rem(10) rem(15);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: calc(22 / 16);
+    color: $secondColor;
+    transition: all 0.3s linear;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -50%;
+      left: 50%;
+      transform: translatex(-50%);
+      width: rem(26);
+      height: rem(26);
+      opacity: 0;
+      border-radius: 50%;
+      transition: all 0.3s linear;
+    }
+
+    &:hover {
+      color: $mainColor;
+    }
+    &._tab-active {
+      position: relative;
+      color: $mainColor;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translatex(-50%);
+        width: rem(6);
+        height: rem(6);
+        background-color: $accentColor;
+        border-radius: 50%;
+        opacity: 1;
+      }
+    }
+  }
+  // .tabs__content
+  //   &__content {
+  //   }
+  // .tabs__body
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(59) rem(40);
+  }
 }

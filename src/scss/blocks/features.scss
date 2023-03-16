@@ -1,0 +1,9 @@
+.features {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+    @include adaptiveValue('gap', 44, 30);
+    @include adaptiveValue('padding-top', 120, 60);
+    @include adaptiveValue('padding-bottom', 120, 60);
+  }
+}
