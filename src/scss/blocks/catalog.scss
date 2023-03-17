@@ -1,4 +1,6 @@
 .catalog {
+  @include adaptiveValue('padding-top', 120, 40);
+  @include adaptiveValue('padding-bottom', 120, 40);
   &__title {
     text-align: center;
     margin: 0 auto;

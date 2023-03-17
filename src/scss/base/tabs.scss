@@ -2,8 +2,10 @@
   // .tabs__navigation
   &__navigation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: rem(16) 0 rem(64);
+    margin-top: rem(16);
+    @include adaptiveValue('margin-bottom', 64, 35);
   }
   // .tabs__title
   &__title {
@@ -50,12 +52,15 @@
     }
   }
   // .tabs__content
-  //   &__content {
-  //   }
+  // &__content {
+  // }
   // .tabs__body
-  &__body {
+  // &__body {
+  // }
+
+  &__inner {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));
     gap: rem(59) rem(40);
   }
 }

@@ -1,6 +1,14 @@
 .collection {
-  background: url(../../img/collection/collection-bg.jpg);
   background-position: bottom right;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  &__text {
+    max-width: rem(755);
+  }
+}
+
+.descr {
+  &__text {
+    max-width: rem(755);
+  }
 }
