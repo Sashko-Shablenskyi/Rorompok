@@ -63,7 +63,10 @@
   font-size: rem(36);
   line-height: calc(48 / 36);
   color: $mainColor;
-  max-width: rem(551);
+  max-width: rem(571);
+  @media (max-width: $tablet) {
+    font-size: rem(24);
+  }
 }
 
 .block {
@@ -94,7 +97,14 @@
 .product {
   &__wrapper {
     position: relative;
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
     img {
+      transition: all 0.2s linear;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -110,6 +120,7 @@
     font-size: rem(16);
     line-height: calc(22 / 16);
     color: #fff;
+    z-index: 5;
     cursor: pointer;
     &--diskont {
       background-color: $diskontProductColor;
@@ -130,7 +141,7 @@
     font-weight: 400;
     font-size: rem(16);
     line-height: calc(22 / 16);
-    color: $productCategoryColor;
+    color: $smallTextolor;
     margin: rem(16) 0 rem(4);
   }
   &__prise {
@@ -168,5 +179,32 @@
   }
   &--active {
     border: rem(3) solid $mainColor;
+    background-image: url(../img/icons/check-line.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.details {
+  display: flex;
+  padding: rem(16);
+  column-gap: rem(28);
+  &__right {
+    position: relative;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: calc(27 / 20);
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+    }
+  }
+  &__class {
+    margin: rem(32) 0 rem(8);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: calc(22 / 16);
+    color: #565050;
   }
 }

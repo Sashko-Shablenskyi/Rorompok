@@ -28,7 +28,8 @@ $accentColor: #f08c00;
 $secondColor: #c6c0c0;
 $diskontProductColor: #e34848;
 $newProductColor: #59b162;
-$productCategoryColor: #686161;
+$smallTextolor: #686161;
+$discountSubtitleColor: #8c8585;
 
 // Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
 
@@ -170,3 +171,4 @@ body {
 @import 'blocks/features';
 @import 'blocks/collection';
 @import 'blocks/catalog';
+@import 'blocks/discount.scss';

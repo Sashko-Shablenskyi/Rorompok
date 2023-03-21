@@ -1,3 +1,24 @@
-//====================================================================================================
-
-//====================================================================================================
+.footer {
+  padding: rem(40) 0;
+  &__inner {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    color: $discountSubtitleColor;
+    line-height: calc(22 / 16);
+    row-gap: rem(20);
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+  &__links {
+    display: flex;
+    column-gap: rem(24);
+    a {
+      text-decoration-line: underline;
+    }
+    @media (max-width: $tablet) {
+      column-gap: rem(15);
+    }
+  }
+}

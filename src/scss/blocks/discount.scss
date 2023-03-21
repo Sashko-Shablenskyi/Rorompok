@@ -1,0 +1,40 @@
+.discount {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  min-height: rem(402);
+  &__inner {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: percent(109, 1220);
+    @media (max-width: $tablet) {
+      color: $mainColor;
+      right: 0;
+      padding: rem(0) rem(15);
+    }
+  }
+  &__subtitle {
+    margin-top: rem(8);
+    line-height: calc(22 / 16);
+    color: $discountSubtitleColor;
+    @media (max-width: $tablet) {
+      color: $mainColor;
+    }
+  }
+  &__btn {
+    background: $accentColor;
+    border-radius: 4px;
+    padding: rem(12) rem(16);
+    font-weight: 500;
+    line-height: calc(22 / 16);
+    color: #fff;
+    margin-top: rem(40);
+  }
+  @media (max-width: $tablet) {
+    background-size: cover;
+    padding: rem(15) 0;
+    min-height: rem(450);
+  }
+}
